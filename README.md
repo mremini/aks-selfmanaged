@@ -21,7 +21,7 @@ You should have an output like the below
 
 ```
 aks-engine deploy --resource-group cloudteam_mremini_spokes --location eastus --api-model aks-spoke1-calico-azure.json --force-overwrite
-INFO[0000] No subscription provided, using selected subscription from azure CLI: cc0d730a-9395-4c66-8a74-efdfc1b05670 
+INFO[0000] No subscription provided, using selected subscription from azure CLI: XXXXXXXXXXXXXXXXXXXXXX 
 WARN[0006] Running only 1 control plane VM not recommended for production clusters, use 3 or 5 for control plane redundancy 
 INFO[0015] Starting ARM Deployment cloudteam_mremini_spokes-43956503 in resource group cloudteam_mremini_spokes. This will take some time... 
 INFO[0465] Finished ARM Deployment (cloudteam_mremini_spokes-43956503). Succeeded 
