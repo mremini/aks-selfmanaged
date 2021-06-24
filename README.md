@@ -20,7 +20,9 @@ aks-engine deploy --resource-group cloudteam_mremini_spokes --location eastus --
 You should have an output like the below
 
 ```
-aks-engine deploy --resource-group cloudteam_mremini_spokes --location eastus --api-model aks-spoke1-calico-azure.json --force-overwrite
+**aks-engine deploy --resource-group cloudteam_mremini_spokes --location eastus --api-model aks-spoke1-calico-azure.json --force-overwrite**
+
+
 INFO[0000] No subscription provided, using selected subscription from azure CLI: XXXXXXXXXXXXXXXXXXXXXX 
 WARN[0006] Running only 1 control plane VM not recommended for production clusters, use 3 or 5 for control plane redundancy 
 INFO[0015] Starting ARM Deployment cloudteam_mremini_spokes-43956503 in resource group cloudteam_mremini_spokes. This will take some time... 
@@ -43,6 +45,7 @@ k8s-nodepool1-17306082-0   Ready    agent    12h   v1.18.19   10.61.4.35    <non
 k8s-nodepool1-17306082-1   Ready    agent    12h   v1.18.19   10.61.4.66    <none>        Ubuntu 18.04.5 LTS   5.4.0-1051-azure   docker://19.3.14
 k8s-nodepool2-17306082-0   Ready    agent    12h   v1.18.19   10.61.6.4     <none>        Ubuntu 18.04.5 LTS   5.4.0-1051-azure   docker://19.3.14
 k8s-nodepool3-17306082-0   Ready    agent    12h   v1.18.19   10.61.8.4     <none>        Ubuntu 18.04.5 LTS   5.4.0-1051-azure   docker://19.3.14
+
 ```
 
 5. Test the AKS cluster and create a deployment
