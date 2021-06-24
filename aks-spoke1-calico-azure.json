@@ -1,0 +1,51 @@
+{
+    "apiVersion": "vlabs",
+    "properties": {
+        "orchestratorProfile": {
+            "kubernetesConfig": {
+                "networkPlugin": "azure",
+                "networkPolicy": "calico"
+            }
+        },
+        "masterProfile": {
+            "count": 1,
+            "dnsPrefix": "mrespoke1",
+            "vmSize": "Standard_D2_v3",
+            "vnetSubnetId": "/subscriptions/cc0d730a-9395-4c66-8a74-efdfc1b05670/resourceGroups/cloudteam_mremini_spokes/providers/Microsoft.Network/virtualNetworks/mre_az_spoke1_useast/subnets/mre_az_spoke1_useast_k8s_1",
+            "firstConsecutiveStaticIP": "10.61.4.10"
+        },
+        "agentPoolProfiles": [
+            {
+                "name": "nodepool1",
+                "count": 2,
+                "vmSize": "Standard_D2_v3",
+                "vnetSubnetId": "/subscriptions/cc0d730a-9395-4c66-8a74-efdfc1b05670/resourceGroups/cloudteam_mremini_spokes/providers/Microsoft.Network/virtualNetworks/mre_az_spoke1_useast/subnets/mre_az_spoke1_useast_k8s_1",
+                "availabilityProfile": "AvailabilitySet"
+            },
+            {
+                "name": "nodepool2",
+                "count": 1,
+                "vnetSubnetId": "/subscriptions/cc0d730a-9395-4c66-8a74-efdfc1b05670/resourceGroups/cloudteam_mremini_spokes/providers/Microsoft.Network/virtualNetworks/mre_az_spoke1_useast/subnets/mre_az_spoke1_useast_k8s_2",
+                "vmSize": "Standard_D2_v3",
+                "availabilityProfile": "AvailabilitySet"
+            },
+            {
+                "name": "nodepool3",
+                "count": 1,
+                "vnetSubnetId": "/subscriptions/cc0d730a-9395-4c66-8a74-efdfc1b05670/resourceGroups/cloudteam_mremini_spokes/providers/Microsoft.Network/virtualNetworks/mre_az_spoke1_useast/subnets/mre_az_spoke1_useast_k8s_3",
+                "vmSize": "Standard_D2_v3",
+                "availabilityProfile": "AvailabilitySet"
+            }
+        ],
+        "linuxProfile": {
+            "adminUsername": "mremini",
+            "ssh": {
+                "publicKeys": [
+                    {
+                        "keyData": ""
+                    }
+                ]
+            }
+        }
+    }
+}
